@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond $1 !^(index\.php|assets|file_upload|doc|ganis|photo|simpegdoc|ganis|photo|simpeg)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+ 
+RewriteRule ^(.*)$ index.php/$1 [L]
